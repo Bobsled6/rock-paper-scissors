@@ -34,4 +34,12 @@ prompt the user to input a choice(rock,paper,scissors)
 return users choice
 */
 
+function getHumanChoice(){
+    let x = prompt("Rock, Paper, or Scissors");
+    console.log(x);
+    return (x);
+};
+
+
+
 
