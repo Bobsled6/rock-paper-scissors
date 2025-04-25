@@ -6,6 +6,7 @@ generate string variable y
 set y equal to rock if x is less than one third
 set y equal to paper if x greater than or equal to one third but less than two thirds
 otherwise set y equal to scissors
+return y
 
 */
 
@@ -28,4 +29,9 @@ function getComputerChoice(){
   
    console.log(getComputerChoice());
    
-    
+/*
+prompt the user to input a choice(rock,paper,scissors)
+return users choice
+*/
+
+
