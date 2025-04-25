@@ -40,6 +40,14 @@ function getHumanChoice(){
     return (x);
 };
 
+/* 
+
+create integer variable humanScore with inital value 0
+create integer variable computerScore with initial value 0
+
+*/ 
+
+
 
 
 
