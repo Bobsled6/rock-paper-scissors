@@ -10,3 +10,15 @@ set y equal to scissors if x is greater than two thirds
 */
 
 
+function getComputerChoice(){
+    let x = Math.random() ;
+    if (x < (1/3)){
+        let y = "rock";
+    }
+
+    
+    }
+
+getComputerChoice();
+
+
