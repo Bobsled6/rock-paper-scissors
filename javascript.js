@@ -50,6 +50,17 @@ create integer variable computerScore with initial value 0
 let humanScore = 0;
 let computerScore = 0;
 
+/*
+
+create a playRound function
+use humanChoice and computerChoice as parameters for playRound
+make the humanChoice parameter case insensitive
+compare human choice to computer choice to determine a winner
+tell the console to log a message indicating if the user won the round
+
+*/
+
+ 
 
 
 
