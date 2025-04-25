@@ -47,6 +47,9 @@ create integer variable computerScore with initial value 0
 
 */ 
 
+let humanScore = 0;
+let computerScore = 0;
+
 
 
 
