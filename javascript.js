@@ -27,7 +27,6 @@ function getComputerChoice(){
          } 
     };
   
-   console.log(getComputerChoice());
    
 /*
 prompt the user to input a choice(rock,paper,scissors)
@@ -36,7 +35,6 @@ return users choice
 
 function getHumanChoice(){
     let x = prompt("Rock, Paper, or Scissors");
-    console.log(x);
     return (x);
 };
 
@@ -56,15 +54,17 @@ create a playRound function
 use humanChoice and computerChoice as parameters for playRound
 make the humanChoice parameter case insensitive
 compare human choice to computer choice to determine a winner
-tell the console to log a message indicating if the user won the round
+tell the console to log a message indicating if the user won the round (and somehow tell the user the computers output as well)
 
 */
 
 function playRound( humanChoice , computerChoice ){
    humanChoice = getHumanChoice().toLowerCase();
-   
+   computerChoice = getComputerChoice();
+   if (humanChoice == "rock" && computerChoice == "scissors") {
+        alert ("You Win! Rock beats Scissors");
+    }
 }
-
 const humanSelection = "getHumanChoice()";
 const computerSelection = "getComputerChoice()";
 
