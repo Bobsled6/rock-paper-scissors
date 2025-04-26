@@ -87,4 +87,11 @@ const computerSelection = "getComputerChoice()";
 
 playRound( humanSelection, computerSelection);
 
+/*
 
+create playGame function
+move playRound function and score variables inside the new function
+play 5 rounds by calling playRound 5 times
+compare user score to computer score and declare a winner
+
+*/ 
