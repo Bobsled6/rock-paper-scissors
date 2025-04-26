@@ -98,6 +98,10 @@ function playGame(){ for (let i = 0; i < 5; i++){
         const computerSelection = "getComputerChoice()";
         
         playRound( humanSelection, computerSelection);
-    } 
+    } if (humanScore > computerScore){
+        alert(`Congrats You Won!`);
+    } else if (humanScore < computerScore) {
+    alert(`Ha! Loser! I win!!`)
+    } else {alert("Its a Tie! Everyone Wins! (or loses)")}
 }
 playGame();
