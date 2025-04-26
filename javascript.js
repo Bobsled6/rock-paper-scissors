@@ -63,7 +63,10 @@ function playRound( humanChoice , computerChoice ){
    computerChoice = getComputerChoice();
    if (humanChoice == "rock" && computerChoice == "scissors") {
         alert ("You Win! Rock beats Scissors");
+    } else if(humanChoice == "rock" && computerChoice == "paper"){
+        alert ("You Lose! Paper beats Rock")
     }
+    
 }
 const humanSelection = "getHumanChoice()";
 const computerSelection = "getComputerChoice()";
