@@ -60,8 +60,14 @@ tell the console to log a message indicating if the user won the round
 
 */
 
- 
+function playRound( humanChoice , computerChoice ){
+   humanChoice = getHumanChoice().toLowerCase();
+   
+}
 
+const humanSelection = "getHumanChoice()";
+const computerSelection = "getComputerChoice()";
 
+playRound( humanSelection, computerSelection);
 
 
