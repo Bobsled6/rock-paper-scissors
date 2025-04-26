@@ -64,8 +64,16 @@ function playRound( humanChoice , computerChoice ){
    if (humanChoice == "rock" && computerChoice == "scissors") {
         alert ("You Win! Rock beats Scissors");
     } else if(humanChoice == "rock" && computerChoice == "paper"){
-        alert ("You Lose! Paper beats Rock")
-    }
+        alert ("You Lose! Rock loses to paper")
+    } else if ( humanChoice == "paper" && computerChoice == "rock"){
+        alert("You Win! Paper beats Rock");
+    } else if (humanChoice == "paper" && computerChoice == "scissors"){
+        alert("You Lose! Paper loses to Scissors")
+    } else if (humanChoice == "scissors" && computerChoice == "paper"){
+        alert("You Win! Scissors beat Paper");
+    } else if (humanChoice == "scissors" && computerChoice == "rock"){
+        alert("You Lose! Scissors lose to Rock");
+    } else {alert("Stop Copying Me!")}
     
 }
 const humanSelection = "getHumanChoice()";
