@@ -58,34 +58,7 @@ tell the console to log a message indicating if the user won the round (and some
 
 */
 
-function playRound( humanChoice , computerChoice ){
-humanChoice = getHumanChoice().toLowerCase();
-computerChoice = getComputerChoice();
-   if (humanChoice == "rock" && computerChoice == "scissors") {
-        alert ("You Win! Rock beats Scissors");
-        humanScore++;
-    } else if(humanChoice == "rock" && computerChoice == "paper"){
-        alert ("You Lose! Rock loses to paper")
-        computerScore++;
-    } else if ( humanChoice == "paper" && computerChoice == "rock"){
-        alert("You Win! Paper beats Rock");
-        humanScore++;
-    } else if (humanChoice == "paper" && computerChoice == "scissors"){
-        alert("You Lose! Paper loses to Scissors");
-        computerScore++;
-    } else if (humanChoice == "scissors" && computerChoice == "paper"){
-        alert("You Win! Scissors beat Paper");
-        humanScore++;
-    } else if (humanChoice == "scissors" && computerChoice == "rock"){
-        alert("You Lose! Scissors lose to Rock");
-        computerScore++;
-    } else {alert("Stop Copying Me!")};
-    
-}
-const humanSelection = "getHumanChoice()";
-const computerSelection = "getComputerChoice()";
 
-playRound( humanSelection, computerSelection);
 
 /*
 
@@ -95,3 +68,36 @@ play 5 rounds by calling playRound 5 times
 compare user score to computer score and declare a winner
 
 */ 
+
+function playGame(){ for (let i = 0; i < 5; i++){
+    function playRound( humanChoice , computerChoice ){
+        humanChoice = getHumanChoice().toLowerCase();
+        computerChoice = getComputerChoice();
+           if (humanChoice == "rock" && computerChoice == "scissors") {
+                alert ("You Win! Rock beats Scissors");
+                humanScore++;
+            } else if(humanChoice == "rock" && computerChoice == "paper"){
+                alert ("You Lose! Rock loses to paper")
+                computerScore++;
+            } else if ( humanChoice == "paper" && computerChoice == "rock"){
+                alert("You Win! Paper beats Rock");
+                humanScore++;
+            } else if (humanChoice == "paper" && computerChoice == "scissors"){
+                alert("You Lose! Paper loses to Scissors");
+                computerScore++;
+            } else if (humanChoice == "scissors" && computerChoice == "paper"){
+                alert("You Win! Scissors beat Paper");
+                humanScore++;
+            } else if (humanChoice == "scissors" && computerChoice == "rock"){
+                alert("You Lose! Scissors lose to Rock");
+                computerScore++;
+            } else {alert("Stop Copying Me!")};
+            
+        }
+        const humanSelection = "getHumanChoice()";
+        const computerSelection = "getComputerChoice()";
+        
+        playRound( humanSelection, computerSelection);
+    } 
+}
+playGame();
