@@ -69,7 +69,7 @@ compare user score to computer score and declare a winner
 
 */ 
 
-function playGame(){ for (let i = 0; i < 5; i++){
+
     function playRound( humanChoice , computerChoice ){
         humanChoice = getHumanChoice().toLowerCase();
         computerChoice = getComputerChoice();
@@ -98,10 +98,26 @@ function playGame(){ for (let i = 0; i < 5; i++){
         const computerSelection = "getComputerChoice()";
         
         playRound( humanSelection, computerSelection);
-    } if (humanScore > computerScore){
+    if (humanScore > computerScore){
         alert(`Congrats You Won!`);
     } else if (humanScore < computerScore) {
     alert(`Ha! Loser! I win!!`)
     } else {alert("Its a Tie! Everyone Wins! (or loses)")}
-}
-playGame();
+
+const rockButton = document.createElement("button");
+rockButton.classList.add("rpsButton");
+rockButton.textContent = "Rock";
+
+const paperButton = document.createElement("button");
+paperButton.classList.add("rpsButton");
+paperButton.textContent = "Paper";
+
+const scissorsButton = document.createElement("button");
+scissorsButton.classList.add("rpsButton");
+scissorsButton.textContent = "Scissors";
+
+
+
+
+
+
