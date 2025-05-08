@@ -70,6 +70,7 @@ compare user score to computer score and declare a winner
 */ 
 
 
+
     function playRound( humanChoice , computerChoice ){
         humanChoice = getHumanChoice().toLowerCase();
         computerChoice = getComputerChoice();
@@ -104,17 +105,22 @@ compare user score to computer score and declare a winner
     alert(`Ha! Loser! I win!!`)
     } else {alert("Its a Tie! Everyone Wins! (or loses)")}
 
-const rockButton = document.createElement("button");
-rockButton.classList.add("rpsButton");
-rockButton.textContent = "Rock";
+    
 
-const paperButton = document.createElement("button");
-paperButton.classList.add("rpsButton");
-paperButton.textContent = "Paper";
+    let rpsButtons = document.querySelector(`.buttonDiv`);
+    rpsButtons.addEventListener(`click`, (e) => {
+        if(e.target.classList.contains(`rpsButton`)){
+            playRound(rpsButton(""));
+        }
+    })
 
-const scissorsButton = document.createElement("button");
-scissorsButton.classList.add("rpsButton");
-scissorsButton.textContent = "Scissors";
+  
+ 
+
+
+
+
+
 
 
 
