@@ -48,6 +48,7 @@ create integer variable computerScore with initial value 0
 let humanScore = 0;
 let computerScore = 0;
 
+
 /*
 
 create a playRound function
@@ -72,7 +73,6 @@ compare user score to computer score and declare a winner
 
 
     function playRound( humanChoice , computerChoice ){
-        // humanChoice = getHumanChoice().toLowerCase();
         computerChoice = getComputerChoice();
            if (humanChoice == "Rock" && computerChoice == "scissors") {
                 alert ("You Win! Rock beats Scissors");
@@ -93,10 +93,13 @@ compare user score to computer score and declare a winner
                 alert("You Lose! Scissors lose to Rock");
                 computerScore++;
             } else {alert("Stop Copying Me!")};
+
+            let scoreboard = document.querySelector(`.scoreboard`);
+            scoreboard.textContent = (humanScore + " - " + computerScore)
             
         }
-        const humanSelection = "getHumanChoice()";
-        const computerSelection = "getComputerChoice()";
+        // const humanSelection = "getHumanChoice()";
+        // const computerSelection = "getComputerChoice()";
         
     /*
     
@@ -111,7 +114,6 @@ compare user score to computer score and declare a winner
 
     let rpsButtons = document.querySelector(`.buttonDiv`);
     rpsButtons.addEventListener(`click`, (rps) => {
-    
         if(rps.target.classList.contains(`rpsButton`)){
             let rpsButtonText = rps.target.innerText;
             console.log(rpsButtonText);
@@ -119,6 +121,9 @@ compare user score to computer score and declare a winner
             playRound(humanChoice);
         }
     })
+
+let scoreboard = document.querySelector(`.scoreboard`);
+scoreboard.textContent = (humanScore + " - " + computerScore)
 
   
  
