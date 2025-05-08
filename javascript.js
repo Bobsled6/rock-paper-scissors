@@ -72,24 +72,24 @@ compare user score to computer score and declare a winner
 
 
     function playRound( humanChoice , computerChoice ){
-        humanChoice = getHumanChoice().toLowerCase();
+        // humanChoice = getHumanChoice().toLowerCase();
         computerChoice = getComputerChoice();
-           if (humanChoice == "rock" && computerChoice == "scissors") {
+           if (humanChoice == "Rock" && computerChoice == "scissors") {
                 alert ("You Win! Rock beats Scissors");
                 humanScore++;
-            } else if(humanChoice == "rock" && computerChoice == "paper"){
+            } else if(humanChoice == "Rock" && computerChoice == "paper"){
                 alert ("You Lose! Rock loses to paper")
                 computerScore++;
-            } else if ( humanChoice == "paper" && computerChoice == "rock"){
+            } else if ( humanChoice == "Paper" && computerChoice == "rock"){
                 alert("You Win! Paper beats Rock");
                 humanScore++;
-            } else if (humanChoice == "paper" && computerChoice == "scissors"){
+            } else if (humanChoice == "Paper" && computerChoice == "scissors"){
                 alert("You Lose! Paper loses to Scissors");
                 computerScore++;
-            } else if (humanChoice == "scissors" && computerChoice == "paper"){
+            } else if (humanChoice == "Scissors" && computerChoice == "paper"){
                 alert("You Win! Scissors beat Paper");
                 humanScore++;
-            } else if (humanChoice == "scissors" && computerChoice == "rock"){
+            } else if (humanChoice == "Scissors" && computerChoice == "rock"){
                 alert("You Lose! Scissors lose to Rock");
                 computerScore++;
             } else {alert("Stop Copying Me!")};
@@ -98,6 +98,8 @@ compare user score to computer score and declare a winner
         const humanSelection = "getHumanChoice()";
         const computerSelection = "getComputerChoice()";
         
+    /*
+    
         playRound( humanSelection, computerSelection);
     if (humanScore > computerScore){
         alert(`Congrats You Won!`);
@@ -105,17 +107,22 @@ compare user score to computer score and declare a winner
     alert(`Ha! Loser! I win!!`)
     } else {alert("Its a Tie! Everyone Wins! (or loses)")}
 
-    
+    */
 
     let rpsButtons = document.querySelector(`.buttonDiv`);
-    rpsButtons.addEventListener(`click`, (e) => {
-        if(e.target.classList.contains(`rpsButton`)){
-            playRound(rpsButton(""));
+    rpsButtons.addEventListener(`click`, (rps) => {
+    
+        if(rps.target.classList.contains(`rpsButton`)){
+            let rpsButtonText = rps.target.innerText;
+            console.log(rpsButtonText);
+            let humanChoice = (rpsButtonText);
+            playRound(humanChoice);
         }
     })
 
   
  
+
 
 
 
