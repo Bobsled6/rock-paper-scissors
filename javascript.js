@@ -74,25 +74,26 @@ compare user score to computer score and declare a winner
 
     function playRound( humanChoice , computerChoice ){
         computerChoice = getComputerChoice();
+        let resultText = document.querySelector(`.results`)
            if (humanChoice == "Rock" && computerChoice == "scissors") {
-                alert ("You Win! Rock beats Scissors");
+                resultText.textContent =  ("You Win! Rock beats Scissors");
                 humanScore++;
             } else if(humanChoice == "Rock" && computerChoice == "paper"){
-                alert ("You Lose! Rock loses to paper")
+                resultText.textContent = ("You Lose! Rock loses to paper")
                 computerScore++;
             } else if ( humanChoice == "Paper" && computerChoice == "rock"){
-                alert("You Win! Paper beats Rock");
+                resultText.textContent = ("You Win! Paper beats Rock");
                 humanScore++;
             } else if (humanChoice == "Paper" && computerChoice == "scissors"){
-                alert("You Lose! Paper loses to Scissors");
+                resultText.textContent = ("You Lose! Paper loses to Scissors");
                 computerScore++;
             } else if (humanChoice == "Scissors" && computerChoice == "paper"){
-                alert("You Win! Scissors beat Paper");
+                resultText.textContent = ("You Win! Scissors beat Paper");
                 humanScore++;
             } else if (humanChoice == "Scissors" && computerChoice == "rock"){
-                alert("You Lose! Scissors lose to Rock");
+                resultText.textContent = ("You Lose! Scissors lose to Rock");
                 computerScore++;
-            } else {alert("Stop Copying Me!")};
+            } else {resultText.textContent = ("Stop Copying Me!")};
 
             let scoreboard = document.querySelector(`.scoreboard`);
             scoreboard.textContent = (humanScore + " - " + computerScore)
