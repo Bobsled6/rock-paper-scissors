@@ -1,13 +1,14 @@
 *{
     background-color: rgb(49, 209, 142);
 }
+
 body{
     min-height: 100vh;
     display:flex;
     justify-content: space-around;
-    
-    
 }
+
+
 .rpsFlex{
     display: flex;  
     flex-direction: column;
@@ -16,6 +17,8 @@ body{
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
+
 .results{
     display:flex;
     flex-wrap: wrap;
@@ -35,7 +38,6 @@ button{
 
 .rock{
     color:#665959;
-    
 }
 
 .paper{
