@@ -1,0 +1,52 @@
+*{
+    background-color: rgb(49, 209, 142);
+}
+body{
+    min-height: 100vh;
+    display:flex;
+    justify-content: space-around;
+    
+    
+}
+.rpsFlex{
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.results{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 72px;
+    font-weight: 550;
+}
+
+button{
+    width: 400px;
+    height: 125px;
+    font-size: 50px;
+    background-color: rgb(43, 41, 42);
+    border-radius: 15px;
+    font-style: italic;
+}
+
+.rock{
+    color:#665959;
+    
+}
+
+.paper{
+    color:white;
+}
+
+.scissors{
+    color:orange;
+}
+
+.scoreboard{
+    font-size: 65px;
+    font-weight: 600;
+}
