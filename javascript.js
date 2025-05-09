@@ -19,6 +19,7 @@ let computerScore = 0;
 
 
 
+
 function playRound( humanChoice , computerChoice ){
     computerChoice = getComputerChoice();
         let resultText = document.querySelector(`.results`)
@@ -46,13 +47,13 @@ function playRound( humanChoice , computerChoice ){
             scoreboard.textContent = (humanScore + " - " + computerScore);
             
             if(computerScore == 5){
-                resultText.textContent = ("Game Lost, Final Score " + humanScore + " to 5 ");
+                resultText.textContent = ("Game Lost, Final Score: " + humanScore + " - 5 ");
                 humanScore = 0;
                 computerScore = 0;
                 scoreboard.textContent = (humanScore + " - " + computerScore);
             };
             if(humanScore == 5){
-                resultText.textContent = ("Game Won! Final Score " + humanScore + " to  " + computerScore);
+                resultText.textContent = ("Game Won! Final Score: " + humanScore + " -  " + computerScore);
                 humanScore = 0;
                 computerScore = 0;
                 scoreboard.textContent = (humanScore + " - " + computerScore);
@@ -71,7 +72,7 @@ function playRound( humanChoice , computerChoice ){
     })
 
 let scoreboard = document.querySelector(`.scoreboard`);
-scoreboard.textContent = (humanScore + " - " + computerScore);
+scoreboard.textContent = (humanScore + " to " + computerScore);
 
 
 
